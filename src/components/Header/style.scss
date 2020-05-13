@@ -1,0 +1,40 @@
+@import "../../assets/scss/variable.scss";
+
+.header {
+  width: 100%;
+  height: 130px;
+  padding: 0 6vw;
+  box-sizing: border-box;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__brand-container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 5rem;
+
+      &--login {
+        margin-right: 0.625rem;
+      }
+    }
+  }
+
+  &__logo {
+    width: 65px;
+    height: 65px;
+    margin-right: 0.9375rem;
+  }
+}
+.ant-input-affix-wrapper {
+  width: 40vw;
+}
