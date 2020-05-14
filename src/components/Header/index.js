@@ -1,10 +1,29 @@
 import React from "react";
 import "./style.scss";
 import logo_bk from "../../assets/images/logo_bk.png";
-import { Input, Typography, Button } from "antd";
-import Nav from "./Nav";
+import { Input, Typography, Button, Dropdown } from "antd";
+import DropdownContainer from "./Dropdown";
 
 const { Search } = Input;
+
+const menuData = [
+  {
+    name: "Thoi trang nu",
+    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+  },
+  {
+    name: "Thoi trang nu",
+    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+  },
+  {
+    name: "Thoi trang nu",
+    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+  },
+  {
+    name: "Thoi trang nu",
+    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+  },
+];
 
 const Header = () => {
   return (
@@ -32,7 +51,13 @@ const Header = () => {
       </div>
 
       <div className="header__lower">
-        <Nav></Nav>
+        {menuData.map((item) => {
+          return (
+            <DropdownContainer subMenu={item.subMenu}>
+              {item.name}
+            </DropdownContainer>
+          );
+        })}
       </div>
     </div>
   );

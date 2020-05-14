@@ -30,11 +30,22 @@
   }
 
   &__logo {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     margin-right: 0.9375rem;
+  }
+
+  &__lower {
+    display: flex;
+    justify-content: space-around;
   }
 }
 .ant-input-affix-wrapper {
   width: 40vw;
+}
+
+.dropdown {
+  cursor: pointer;
+  color: $white;
+  min-width: 7.5rem;
 }
