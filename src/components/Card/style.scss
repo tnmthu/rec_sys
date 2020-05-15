@@ -1,11 +1,11 @@
 @import "../../assets/scss/variable.scss";
 
 .card {
-  border-radius: 4px;
   width: 200px;
+  cursor: pointer;
 
   &:hover {
-    box-shadow: 3px 10px 40px -19px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 10px 40px -19px rgba(51, 23, 23, 0.35);
     transition: 0.2s;
   }
 

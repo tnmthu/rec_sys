@@ -1,15 +1,28 @@
 import React from "react";
 import Card from "../Card";
+import { Typography, Button } from "antd";
+import "./style.scss";
 
-const card = {
-  itemName: "May doc sach Kindle",
-  itemImage:
-    "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
-  itemPrice: 123456,
-};
-
-const CardContainer = () => {
-  return <Card item={card}></Card>;
+const CardContainer = (props) => {
+  return (
+    <div className="mb-4">
+      <Typography.Title level={3} className="ml-3 mb-1">
+        {props.section.sectionName}
+      </Typography.Title>
+      <div className="card-container py-2">
+        <div className="items d-flex flex-wrap justify-content-around">
+          {props.section.items.map((item) => {
+            return <Card item={item}></Card>;
+          })}
+        </div>
+        <div className="w-100 mb-2 d-flex justify-content-center">
+          <Button type="primary" shape="round" size="large">
+            Xem Them
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default CardContainer;

@@ -5,15 +5,17 @@ import "./style.scss";
 const Card = (props) => {
   console.log({ props });
   return (
-    <div className="card">
+    <div className="card rounded mb-3">
       <Avatar
-        className="card__image"
+        className="card__image m-0 w-100"
         shape="square"
         src={props.item.itemImage}
         alt="item image"
       ></Avatar>
-      <p className="card__name">{props.item.itemName}</p>
-      <Typography.Title level={4}>${props.item.itemPrice}</Typography.Title>
+      <div className="p-2">
+        <p className="card__name m-0">{props.item.itemName}</p>
+        <Typography.Title level={4}>${props.item.itemPrice}</Typography.Title>
+      </div>
     </div>
   );
 };
