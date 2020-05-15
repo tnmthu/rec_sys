@@ -23,6 +23,10 @@ const menuData = [
     name: "Thoi trang nu",
     subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
   },
+  {
+    name: "Thoi trang nu",
+    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+  },
 ];
 
 const Header = () => {
@@ -31,7 +35,7 @@ const Header = () => {
       <div className="header__upper">
         <div className="header__upper__brand-container">
           <img className="header__logo" src={logo_bk} alt="logo BK" />
-          <Typography.Title level={4} style={{ color: "#fff" }}>
+          <Typography.Title level={4} style={{ color: "#fff" }} className="m-0">
             BK SHOP
           </Typography.Title>
         </div>

@@ -1,0 +1,19 @@
+@import "../../assets/scss/variable.scss";
+
+.card {
+  border-radius: 4px;
+  width: 200px;
+
+  &:hover {
+    box-shadow: 3px 10px 40px -19px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+  }
+
+  &__image {
+    width: 180px;
+    height: auto;
+  }
+  &__name {
+    font-size: 18px;
+  }
+}
