@@ -1,1 +1,28 @@
 @import "../../assets/scss/variable.scss";
+
+.body {
+  width: 85%;
+
+  .item-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    .item-img {
+      width: 40vw;
+      height: auto;
+      flex-grow: 1;
+    }
+
+    .item-info {
+      &--name {
+        font-size: 32px;
+      }
+
+      &--price {
+        font-size: 20px;
+        color: $crimson;
+      }
+    }
+  }
+}
