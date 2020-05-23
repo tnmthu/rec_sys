@@ -10,6 +10,8 @@ const tmp = {
   itemImage:
     "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
   itemPrice: 123456,
+  itemDescription:
+    "Loại màn hình: Carta HD 6 inch Bộ nhớ 8GB Mật độ điểm ảnh: 300 ppi. Thời gian sử dụng pin 4 tuần 30ph/ ngày Không bị màn hình chói lóa. Tích hợp đèn - đọc mà không có mỏi mắt Dễ dàng lật trang và ghi chú lên sách",
 };
 
 const App = () => {
