@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Menu, Dropdown } from "antd";
 
 const DropdownContainer = (props) => {
@@ -7,7 +8,7 @@ const DropdownContainer = (props) => {
       {props.subMenu.map((item) => {
         return (
           <Menu.Item>
-            <a>{item}</a>
+            <Link to="#">{item}</Link>
           </Menu.Item>
         );
       })}
