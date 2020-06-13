@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Typography } from "antd";
 import "./style.scss";
@@ -18,7 +18,7 @@ function Card(props) {
     });
   };
 
-  // 
+  //
   return (
     <Link to={`/product/${props.item.name}`}>
       <div className="card rounded mb-3" onClick={() => handleClickItem()}>
