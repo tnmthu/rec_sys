@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal, Form, Input } from "antd";
 import Header from "../../components/Header";
 import CardContainer from "../../components/CardContainer";
 import "./style.scss";
@@ -134,16 +135,44 @@ const riengChoBan = {
   ],
 };
 
-const Homepage = () => {
+function Homepage() {
+  const [openLoginModal, setOpenLoginModal] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
+  const handleLogin = () => {
+    setIsLogin(true);
+    setOpenLoginModal(false);
+  };
+
+  const handleCancel = () => {
+    setOpenLoginModal(false);
+  };
+
   return (
     <div className="Homepage">
-      <Header></Header>
+      <Header
+        setOpenLoginModal={setOpenLoginModal}
+        setIsLogin={setIsLogin}
+        isLogin={isLogin}
+      ></Header>
       <div className="body mt-4 mx-auto ">
         <CardContainer section={sanPhamHot} />
-        <CardContainer section={riengChoBan} />
+        {isLogin && <CardContainer section={riengChoBan} />}
       </div>
+      <Modal
+        title="Login"
+        visible={openLoginModal}
+        onOk={() => handleLogin()}
+        onCancel={() => handleCancel()}
+      >
+        <Form>
+          <Form.Item label="User Id">
+            <Input></Input>
+          </Form.Item>
+        </Form>
+      </Modal>
     </div>
   );
-};
+}
 
 export default Homepage;

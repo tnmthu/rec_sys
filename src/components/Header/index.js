@@ -1,35 +1,43 @@
 import React from "react";
 import "./style.scss";
 import logo_bk from "../../assets/images/logo_bk.png";
-import { Input, Typography, Button, Dropdown } from "antd";
+import { Input, Typography, Button } from "antd";
 import DropdownContainer from "./Dropdown";
 
 const { Search } = Input;
 
 const menuData = [
   {
-    name: "Thoi trang nu",
-    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+    name: "Thời trang nữ",
+    subMenu: ["Đầm", "Váy", "Áo công sở", "Áo thun", "Quần tây"],
   },
   {
-    name: "Thoi trang nu",
-    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+    name: "Thời trang nam",
+    subMenu: ["Quần", "Áo sơ mi", "Áo thun", "Áo khoác"],
   },
   {
-    name: "Thoi trang nu",
-    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+    name: "Công nghệ",
+    subMenu: ["Máy tính", "Thiết bị di động"],
   },
   {
-    name: "Thoi trang nu",
-    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+    name: "Đời sống",
+    subMenu: ["Trang trí bàn", "Trang trí nhà cửa"],
   },
   {
-    name: "Thoi trang nu",
-    subMenu: ["Dam", "Vay", "Ao cong so", "Ao so mi"],
+    name: "Giày dép",
+    subMenu: ["Giày nam", "Giày nữ", "Giày thể thao"],
   },
 ];
 
-const Header = () => {
+function Header(props) {
+  const handleClickLogin = () => {
+    props.setOpenLoginModal(true);
+  };
+
+  const handleClickLogout = () => {
+    props.setIsLogin(false);
+  };
+
   return (
     <div className="header">
       <div className="header__upper">
@@ -45,12 +53,29 @@ const Header = () => {
           onSearch={(value) => console.log(value)}
         />
         <div className="header__upper__btn-container">
-          <Button className="header__upper__btn header__upper__btn--login">
-            Login
-          </Button>
-          <Button className="header__upper__btn header__upper__btn--register">
-            Register
-          </Button>
+          {!props.isLogin ? (
+            <>
+              <Button
+                onClick={handleClickLogin}
+                className="header__upper__btn header__upper__btn--login"
+              >
+                Login
+              </Button>
+              <Button className="header__upper__btn header__upper__btn--register">
+                Register
+              </Button>
+            </>
+          ) : (
+            <>
+              <span className="mr-2">Welcome back!</span>
+              <Button
+                onClick={handleClickLogout}
+                className="header__upper__btn header__upper__btn--login"
+              >
+                Logout
+              </Button>
+            </>
+          )}
         </div>
       </div>
 
@@ -65,6 +90,6 @@ const Header = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Header;

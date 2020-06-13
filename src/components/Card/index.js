@@ -4,7 +4,6 @@ import { Avatar, Typography } from "antd";
 import "./style.scss";
 
 const Card = (props) => {
-  console.log({ props });
   return (
     <Link to="/product">
       <div className="card rounded mb-3">
