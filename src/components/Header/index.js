@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 import logo_bk from "../../assets/images/logo_bk.png";
-import { Input, Typography, Button } from "antd";
+import { Input, Typography } from "antd";
 import DropdownContainer from "./Dropdown";
 
 const { Search } = Input;
@@ -30,13 +30,6 @@ const menuData = [
 ];
 
 function Header(props) {
-  const handleClickLogin = () => {
-    props.setOpenLoginModal(true);
-  };
-
-  const handleClickLogout = () => {
-    props.setIsLogin(false);
-  };
 
   return (
     <div className="header">
@@ -53,29 +46,9 @@ function Header(props) {
           onSearch={(value) => console.log(value)}
         />
         <div className="header__upper__btn-container">
-          {!props.isLogin ? (
-            <>
-              <Button
-                onClick={handleClickLogin}
-                className="header__upper__btn header__upper__btn--login"
-              >
-                Login
-              </Button>
-              <Button className="header__upper__btn header__upper__btn--register">
-                Register
-              </Button>
-            </>
-          ) : (
-            <>
-              <span className="mr-2">Welcome back!</span>
-              <Button
-                onClick={handleClickLogout}
-                className="header__upper__btn header__upper__btn--login"
-              >
-                Logout
-              </Button>
-            </>
-          )}
+          <>
+            <span className="mr-2">Welcome back!</span>
+          </>
         </div>
       </div>
 

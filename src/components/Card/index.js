@@ -14,14 +14,14 @@ function Card(props) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: 9999 }),
+      body: JSON.stringify({ product_id: props.item.product_id }),
     });
   };
 
-  // onClick={() => handleClickItem()}
+  // 
   return (
-    <Link to={`/product/hihihihihhhihi`}>
-      <div className="card rounded mb-3">
+    <Link to={`/product/${props.item.name}`}>
+      <div className="card rounded mb-3" onClick={() => handleClickItem()}>
         <div className="card__image__container">
           <img className="card__image m-0 w-100" src={cart} alt="item" />
         </div>
