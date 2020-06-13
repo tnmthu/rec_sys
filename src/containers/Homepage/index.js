@@ -3,68 +3,59 @@ import { Modal, Form, Input } from "antd";
 import Header from "../../components/Header";
 import CardContainer from "../../components/CardContainer";
 import "./style.scss";
+import cart from "../../assets/images/cart.png";
 
 const sanPhamHot = {
   sectionName: "SAN PHAM HOT",
   items: [
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
   ],
@@ -74,62 +65,52 @@ const riengChoBan = {
   items: [
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
     {
       itemName: "May doc sach Kindle",
-      itemImage:
-        "https://salt.tikicdn.com/cache/w780/ts/product/be/f2/ba/f7cacd4da64139b88acb667612d814ba.jpg",
+      itemImage: cart,
       itemPrice: 123456,
     },
   ],
