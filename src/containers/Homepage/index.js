@@ -1,62 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, Form, Input } from "antd";
 import Header from "../../components/Header";
 import CardContainer from "../../components/CardContainer";
 import "./style.scss";
-import cart from "../../assets/images/cart.png";
+import * as URL from "../../constants";
 
 const sanPhamHot = {
   sectionName: "SAN PHAM HOT",
   items: [
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
   ],
 };
@@ -64,54 +63,53 @@ const riengChoBan = {
   sectionName: "RIENG CHO BAN",
   items: [
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
     {
-      itemName: "May doc sach Kindle",
-      itemImage: cart,
-      itemPrice: 123456,
+      name: "May doc sach Kindle",
+
+      price: 123456,
     },
   ],
 };
@@ -119,6 +117,14 @@ const riengChoBan = {
 function Homepage() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [homeItems, setHomeItems] = useState({});
+
+  // useEffect(() => {
+  //   fetch(URL.homepageItems)
+  //     .then((res) => res.json())
+  //     .then((data) => setHomeItems(data))
+  //     .catch((err) => console.error("Error fetch home items"));
+  // }, []);
 
   const handleLogin = () => {
     setIsLogin(true);

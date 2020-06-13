@@ -9,12 +9,12 @@
     justify-content: flex-start;
 
     .item-img {
-      width: 40vw;
+      width: 300px;
       height: auto;
-      flex-grow: 1;
     }
 
     .item-info {
+      margin-left: 50px;
       &--name {
         font-size: 32px;
       }
