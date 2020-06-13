@@ -38,6 +38,7 @@ function Header(props) {
     props.setIsLogin(false);
   };
 
+  console.log("dcm");
   return (
     <div className="header">
       <div className="header__upper">
