@@ -5,114 +5,108 @@ import CardContainer from "../../components/CardContainer";
 import "./style.scss";
 import * as URL from "../../constants";
 
-const sanPhamHot = {
-  sectionName: "SAN PHAM HOT",
-  items: [
-    {
-      name: "May doc sach Kindle",
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+const sanPhamHot = [
+  {
+    name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-  ],
-};
-const riengChoBan = {
-  sectionName: "RIENG CHO BAN",
-  items: [
-    {
-      name: "May doc sach Kindle",
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+];
+const riengChoBan = [
+  {
+    name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-    {
-      name: "May doc sach Kindle",
+    price: 123456,
+  },
+  {
+    name: "May doc sach Kindle",
 
-      price: 123456,
-    },
-  ],
-};
+    price: 123456,
+  },
+];
 
 function Homepage() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
@@ -143,8 +137,10 @@ function Homepage() {
         isLogin={isLogin}
       ></Header>
       <div className="body mt-4 mx-auto ">
-        <CardContainer section={sanPhamHot} />
-        {isLogin && <CardContainer section={riengChoBan} />}
+        <CardContainer sectionName="Sản phẩm hot" items={sanPhamHot} />
+        {isLogin && (
+          <CardContainer sectionName="Dành riêng cho bạn" items={riengChoBan} />
+        )}
       </div>
       <Modal
         title="Login"
