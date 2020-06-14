@@ -17,7 +17,7 @@ const DropdownContainer = (props) => {
 
   return (
     <Dropdown
-      className="dropdown"
+      className="dropdown text-decoration-none h5 my-3"
       overlay={dropdownMenu}
       placement="bottomRight"
     >

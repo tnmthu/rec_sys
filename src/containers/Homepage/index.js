@@ -15,14 +15,13 @@ function Homepage() {
       .catch((err) => console.error("Error fetch home items"));
   }, []);
 
-  console.log(homeItems);
   return (
     <div className="Homepage">
       <Header
       ></Header>
       <div className="body mt-4 mx-auto ">
         <CardContainer sectionName="Sản phẩm hot" items={homeItems['hot_products']} />
-          <CardContainer sectionName="Dành riêng cho bạn" items={homeItems['recommendations']} />
+        <CardContainer sectionName="Dành riêng cho bạn" items={homeItems['recommendations']} />
       </div>
     </div>
   );

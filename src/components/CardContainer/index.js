@@ -23,19 +23,20 @@ function CardContainer(props) {
       <Typography.Title level={3} className="ml-3 mb-1">
         {props.sectionName}
       </Typography.Title>
-      <div className="card-container py-2">
-        <div className="items d-flex flex-wrap justify-content-around">
+      <div className="card-container py-2 d-flex flex-column align-items-center">
+        <div className="d-flex flex-wrap card-container-wrapper">
           {currentItems.map((item) => {
             return <Card item={item}></Card>;
           })}
         </div>
-        <div className="w-100 mb-2 d-flex justify-content-center">
+        <div className="w-75 mb-2 d-flex">
           {visibleSeeMore && (
             <Button
               onClick={() => handleSeeMore()}
               type="primary"
               shape="round"
               size="large"
+              className="btn-container"
             >
               Xem Thêm
             </Button>

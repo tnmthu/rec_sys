@@ -47,7 +47,7 @@ function Header(props) {
         />
         <div className="header__upper__btn-container">
           <>
-            <span className="mr-2">Welcome back!</span>
+            <span className="mr-2 text-white font-weight-bold h5">Welcome back!</span>
           </>
         </div>
       </div>

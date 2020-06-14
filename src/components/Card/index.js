@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Typography } from "antd";
 import "./style.scss";
@@ -20,14 +20,14 @@ function Card(props) {
 
   // 
   return (
-    <Link to={`/product/${props.item.name}`}>
-      <div className="card rounded mb-3" onClick={() => handleClickItem()}>
+    <Link className="card-wrapper" to={`/product/${props.item.name}`}>
+      <div className="card rounded mb-3 d-flex flex-column mb-4" onClick={() => handleClickItem()}>
         <div className="card__image__container">
-          <img className="card__image m-0 w-100" src={cart} alt="item" />
+          <img className="card__image m-0" src={cart} alt="item" />
         </div>
-        <div className="p-2">
-          <p className="card__name m-0">{props.item.name}</p>
-          <Typography.Title level={4}>
+        <div className="px-5 mt-3 d-flex flex-column justify-content-between h-100">
+          <p className="card__name">{props.item.name}</p>
+          <Typography.Title level={4} className="mb-4">
             ${price.toLocaleString("en")}
           </Typography.Title>
         </div>

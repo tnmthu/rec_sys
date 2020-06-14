@@ -1,8 +1,10 @@
 @import "../../assets/scss/variable.scss";
 
 .card {
-  width: 200px;
+  width: 100%;
   cursor: pointer;
+  height: 320px;
+  text-align: center;
 
   &:hover {
     box-shadow: 3px 10px 40px -19px rgba(51, 23, 23, 0.35);
@@ -14,13 +16,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
   }
 
   &__image {
-    width: 85px !important;
+    width: 100px;
     height: auto;
   }
   &__name {
     font-size: 18px;
+    margin: auto;
   }
+}
+
+.card-wrapper {
+  width: 18%;
+  margin: 10px 14px;
 }
