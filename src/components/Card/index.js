@@ -18,7 +18,7 @@ function Card(props) {
     });
   };
 
-  // 
+  //
   return (
     <Link className="card-wrapper" to={`/product/${props.item.name}`}>
       <div className="card rounded mb-3 d-flex flex-column mb-4" onClick={() => handleClickItem()}>
